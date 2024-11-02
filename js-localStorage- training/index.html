@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" >
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="head-content">
+          <a href="index.html" class="logo">Shopping Cart</a>
+          <nav>
+            <ul class="links">
+              <li><a href="log-in.html"> sign in</a></li>
+              <li><a href="register.html"> sign up</a></li>
+            </ul>
+            <ul id="user_info">
+              <li><a href="#" id="user" class="user"></a></li>
+              <li class="Shopping-cart">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                <div class="badge">0</div>
+              </li>
+              <!-- <li class="search" id="search"><i class="fa-solid fa-magnifying-glass"></i></li> -->
+              <li class="logout" id="logOut">
+                <i class="fa-solid fa-right-from-bracket" title="log out"></i>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="side-cart" id="sider" tabindex="-1">
+      <a href="products.html"> view all products </a>
+    </section>
+    <section class="main-section">
+      <div class="container">
+        <div class="products"></div>
+      </div>
+    </section>
+
+    <script src="JS/user.js"></script>
+    <script src="JS/main.js"></script>
+    <!-- <script src="JS/ai.js"></script> -->
+  </body>
+</html>

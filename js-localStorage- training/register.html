@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="head-content">
+          <a href="index.html" class="logo">Shopping Cart</a>
+          <nav>
+            <ul class="links">
+              <li><a href="log-in.html"> sign in</a></li>
+              <li><a href="register.html"> sign up</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="section-form">
+      <h2>Register now</h2>
+      <form method="dialog">
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="user"
+          id="username"
+        />
+        <input type="email" placeholder="Enter Email" name="user" id="email" />
+        <input type="password" placeholder="Enter password" id="password" />
+        <input type="submit" value="sign up" id="signUp" />
+        <div class="default">
+          <p>Already have an account? <a href="log-in.html">sign in</a></p>
+        </div>
+      </form>
+    </section>
+    <script src="JS/register.js"></script>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
