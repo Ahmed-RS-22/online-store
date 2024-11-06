@@ -127,6 +127,7 @@ function drawProducts() {
 /////////////// cart
 let productsCart = document.getElementById("sider");
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    localStorage.setItem("cart", JSON.stringify(cartItems));
 function productsInCart() {
   let productinacrt = [];
   for (item of JSON.parse(localStorage.getItem("cart"))) {
