@@ -1,12 +1,12 @@
 const products = [
   { id: 1, name: "product-1", price: 10, category: "cat-1", image: "1.jpg" },
-  { id: 2, name: "product-2", price: 20, category: "cat-2", image: "2.jpg" },
-  { id: 3, name: "product-3", price: 30, category: "cat-3", image: "3.jpg" },
-  { id: 4, name: "product-4", price: 40, category: "cat-4", image: "4.jpg" },
-  { id: 5, name: "product-5", price: 50, category: "cat-5", image: "5.jpg" },
-  { id: 6, name: "product-6", price: 60, category: "cat-6", image: "6.jpg" },
-  { id: 7, name: "product-7", price: 70, category: "cat-7", image: "7.jpg" },
-  { id: 8, name: "product-8", price: 80, category: "cat-8", image: "8.jpg" },
+  { id: 2, name: "troduct-2", price: 20, category: "bat-2", image: "2.jpg" },
+  { id: 3, name: "croduct-3", price: 30, category: "bat-3", image: "3.jpg" },
+  { id: 4, name: "croduct-4", price: 40, category: "hat-4", image: "4.jpg" },
+  { id: 5, name: "product-5", price: 50, category: "hat-5", image: "5.jpg" },
+  { id: 6, name: "roduct-6", price: 60, category: "cat-6", image: "6.jpg" },
+  { id: 7, name: "troduct-7", price: 70, category: "cat-7", image: "7.jpg" },
+  { id: 8, name: "roduct-8", price: 80, category: "cat-8", image: "8.jpg" },
   {id: 9, name: "product-9", price: 90, category: "cat-9", image: "9.jpg"},
   {id: 10, name: "product-10", price: 100, category: "cat-10", image: "10.jpg"},
   {id: 11, name: "product-11", price: 110, category: "cat-11", image: "11.jpg"},
@@ -47,6 +47,7 @@ function favourite() {
     }
     btn.addEventListener("click", function () {
       let favIemID = btn.dataset.id;
+      let favIemImage = btn.dataset.image;
       btn.classList.toggle("fav");
       btn.classList.toggle("grow");
       let favItem = btn.parentNode.parentNode.querySelector(".product-desc");
@@ -54,6 +55,7 @@ function favourite() {
         id: favIemID,
         name: favItem.querySelector(".iname").textContent,
         category: favItem.querySelector(".icat").textContent,
+        image:favIemImage,
       };
       addAndRemovefavourite(favData);
     });
@@ -105,14 +107,14 @@ function drawProducts() {
                 <img src="images/${item.image}" alt="...">
               </div>
               <div class="product-desc" >
-                <p><span>name: </span><span class = "iname">${item.name}</span></p>
+                <p><span>name: </span><span class = "iname" data-ser="${item.name}">${item.name}</span></p>
                 <p><span>price : </span><span >${item.price} $</span></p>
-                <p><span>category : </span><span class = "icat">${item.category}</span></p>
+                <p><span>category : </span><span class = "icat" data-ser="${item.category}">${item.category}</span></p>
               </div>
               <div class="product-btns">
               <button class=" productBtn add" onClick="addToCart(${item.id}) " data-id="${item.id}">add to cart</button>
               <button class=" productBtn remove" onClick="removeFromCart(${item.id})" data-id="${item.id}" style="display: none;">remove from cart </button>
-              <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
+              <button class=" favBtn" data-id="${item.id}" data-image="${item.image}" tilte="add to favourite"><i class="fa-solid fa-heart"></i></button>
               </div>
               </div>
               `;
@@ -210,6 +212,39 @@ function soldItemCont(id, action) {
 function count() {
   let badge = document.querySelector(".Shopping-cart .badge");
   let solditems = document.querySelectorAll("#sider .sold");
-  badge.innerHTML = solditems.length;
+  if(solditems.length <= 0){
+    badge.style.display="none"
+  }else{
+    badge.style.display="block"
+    badge.innerHTML = solditems.length;
+
+  }
+}
+let searchInput = document.getElementById("search");
+function searching() {
+  let searchedItems =allProducts.querySelectorAll(".product")
+  searchedItems.forEach((item) => {
+    searchInput.addEventListener("keyup",()=>{      
+      let searchInputValue = document.getElementById("search").value.toLowerCase();
+      const selection = document.getElementById("searchBy").value.toLowerCase()
+      let searchType;
+  if(selection == "name"){
+    searchType = item.querySelector(".iname").dataset.ser
+    }else if(selection == "category"){
+      searchType =item.querySelector(".icat").dataset.ser
+      }      
+      if (searchType.includes(searchInputValue) && searchType.startsWith(searchInputValue[0])) {
+        item.style.display = "flex";
+        } else {
+          item.style.display = "none";
+          if(searchInputValue.trim() == ""){
+            item.style.display = "flex"
+          }
+          }
+      })
+    })
+
 }
 drawProducts();
+searching()
+

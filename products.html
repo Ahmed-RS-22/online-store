@@ -6,7 +6,7 @@
     <title>Shopping Cart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
@@ -19,21 +19,31 @@
     <header>
       <div class="container">
         <div class="head-content">
-          <a href="index.html" class="logo">Shopping Cart</a>
+          <div class="logo">
+            <img src="images/logo.png" alt="...">
+            <a href="index.html" class="logo-name">el ballon</a>
+          </div>
           <nav>
             <ul class="links">
-              <li><a href="log-in.html"> sign in</a></li>
+              <li><a><a href="#"><i class="fa fa-user"></i></a></li>
+              <li><a href="log-in.html"> log in</a></li>
               <li><a href="register.html"> sign up</a></li>
             </ul>
-            <ul id="user_info">
-              <li><a href="#" id="user" class="user"></a></li>
+            <ul class="icon-bar user-info" id="user_info">
+              <li><a class="active" href="#"><i class="fa fa-home"></i></a></li> 
               <li class="Shopping-cart">
-                <i class="fa-solid fa-cart-arrow-down"></i>
+                <a href="#"><i class="fa fa-cart-arrow-down"></i></a>
                 <div class="badge">0</div>
               </li>
-              <li class="logout" id="logOut">
-                <i class="fa-solid fa-right-from-bracket" title="log out"></i>
-              </li>
+              <li><a href="#"><i class="fa fa-search"></i></a> </li>
+              <li class="user" tabindex="-1">
+                <a><i class="fa fa-user"></i></a>
+                <ul class="user-detail">
+                    <li><i class="fa fa-user"></i> <a href="#" id="user" ></a></li>
+                    <li><a href="products.html#favouriuts"><i class="fa fa-heart"></i></a><a href="products.html#favouriuts">favourites </a> </li>
+                    <li class="logout" id="logOut"><i class="fa-solid fa-right-from-bracket" title="log out"></i><span>log out</span></li>
+                </ul>
+              </li> 
             </ul>
           </nav>
         </div>
@@ -50,6 +60,7 @@
     <section class="myFavourits" id="favouriuts">
       <div class="container">
         <h2 class="title">favourite</h2>
+
         <div class="favs-cart" id="favsCarts">
           <!-- 1 -->
           <div class="fav-product">
@@ -60,107 +71,11 @@
             </div>
             <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
           </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
-          <!-- 1 -->
-          <div class="fav-product">
-            <div class="image"><img src="images/10.jpg" alt="..."></div>
-            <div class="fav-data">
-              <p class="name"><span>product : </span><span>name</span></p>
-              <p class="category"><span>category : </span><span>category</span></p>
-            </div>
-            <button class=" favBtn" data-id="${item.id}"><i class="fa-solid fa-heart"></i></button>
-          </div>
-          <!-- 2 -->
+
+        </div>
+        <div class="slide-btns">
+          <button id="btnprev" class="btn"><i class="fa-solid fa-chevron-left "></i></button>
+          <button id="btnNext" class="btn"><i class="fa-solid fa-chevron-right "></i></button>
         </div>
       </div>
     </section>

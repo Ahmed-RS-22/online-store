@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" >
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" >
     <link rel="stylesheet" href="CSS/normalize.css" />
     <link rel="stylesheet" href="CSS/all.min.css" />
     <link rel="stylesheet" href="CSS/main.css" />
@@ -19,27 +19,47 @@
     <header>
       <div class="container">
         <div class="head-content">
-          <a href="index.html" class="logo">Shopping Cart</a>
+          <div class="logo">
+            <img src="images/logo.png" alt="...">
+            <a href="index.html" class="logo-name">el ballon</a>
+          </div>
           <nav>
             <ul class="links">
-              <li><a href="log-in.html"> sign in</a></li>
+              <li><a><a href="#"><i class="fa fa-user"></i></a></li>
+              <li><a href="log-in.html"> log in</a></li>
               <li><a href="register.html"> sign up</a></li>
             </ul>
-            <ul id="user_info">
-              <li><a href="#" id="user" class="user"></a></li>
+            <ul class="icon-bar user-info" id="user_info">
+              <li><a class="active" href="#"><i class="fa fa-home"></i></a></li> 
               <li class="Shopping-cart">
-                <i class="fa-solid fa-cart-arrow-down"></i>
+                <a href="#"><i class="fa fa-cart-arrow-down"></i></a>
                 <div class="badge">0</div>
               </li>
-              <!-- <li class="search" id="search"><i class="fa-solid fa-magnifying-glass"></i></li> -->
-              <li class="logout" id="logOut">
-                <i class="fa-solid fa-right-from-bracket" title="log out"></i>
-              </li>
+              <li><a href="#" id="searcher" tabindex="-1"><i class="fa fa-search"></i></a> </li>
+              <li class="user" tabindex="-1">
+                <a><i class="fa fa-user"></i></a>
+                <ul class="user-detail" tabindex="-1">
+                    <li><i class="fa fa-user"></i> <a href="#" id="user" ></a></li>
+                    <li><a href="products.html#favouriuts"><i class="fa fa-heart"></i></a><a href="products.html#favouriuts">favourites </a> </li>
+                    <li class="logout" id="logOut"><i class="fa-solid fa-right-from-bracket" title="log out"></i><span>log out</span></li>
+                </ul>
+              </li> 
             </ul>
           </nav>
         </div>
       </div>
     </header>
+    <nav class="search-bar" id="searchBar" tabindex="-1">
+      <div class="container">
+        <div class="searching-area">
+          <select name="Search by: " id="searchBy" title="search" >
+            <option value="name"> search by name </option>
+            <option value="category"> search by category</option>
+          </select>
+          <input type="search" placeholder="search" id="search">
+        </div>
+      </div>
+    </nav>
     <section class="side-cart" id="sider" tabindex="-1">
       <a href="products.html"> view all products </a>
     </section>

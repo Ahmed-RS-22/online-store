@@ -107,7 +107,13 @@ function soldItemCont(id, action) {
 function count() {
     let badge = document.querySelector(".Shopping-cart .badge");
     let solditems = document.querySelectorAll("#sider .sold");
-    badge.innerHTML = solditems.length;
+    if(solditems.length <= 0){
+      badge.style.display="none"
+    }else{
+      badge.style.display="block"
+      badge.innerHTML = solditems.length;
+  
+    }
   }
 function totalPrice(){
     let total = 0;
@@ -117,6 +123,52 @@ function totalPrice(){
         });
         totalPrice.innerHTML = total +" "+"$";
 }
-
-
+let favourites =document.getElementById("favsCarts");
+let favInCart = JSON.parse(localStorage.getItem("favourite")) || [];
+function drawfav() {
+  let drawnFavProducts=favInCart.map((item)=>{
+    return`
+          <div class="fav-product"  data-id="${item.id}">
+            <div class="image"><img src="images/${item.image}" alt="..."></div>
+            <div class="fav-data">
+              <p class="name"><span>product : </span><span>${item.name}</span></p>
+              <p class="category"><span>category : </span><span>${item.category}</span></p>
+            </div>
+            <button class=" favBtn" data-id="${item.id}" onClick="removeFromFav(${item.id})"><i class="fa-solid fa-heart"></i></button>
+          </div>
+    `
+  }).join("")
+  favourites.innerHTML = drawnFavProducts;
+}
+function removeFromFav(id) {
+  let favIndex = favInCart.findIndex((item) => item.id == id);
+  const removedItem = document.querySelector(`.fav-product[data-id="${id}"]`);
+  if(favIndex !== -1){
+    favInCart.splice(favIndex, 1);
+    removedItem.remove()
+  }
+  localStorage.setItem("favourite", JSON.stringify(favInCart));
+}
 drawnProducts();
+drawfav()
+//  favourite slide show
+let next =document.getElementById("btnNext")
+let prev =document.getElementById("btnprev")
+let favsBox = document.getElementById("favsCarts")
+let singleItemWidth =document.querySelectorAll(".favs-cart .fav-product")[0].offsetWidth;
+let x =singleItemWidth
+favsBox.addEventListener("mouseenter",()=>{favsBox.style.cursor="grab"})
+next.addEventListener("mousedown",()=>{
+  favsBox.scrollBy({
+    top: 0,
+    left: x,
+    behavior: "smooth",
+  })
+})
+prev.addEventListener("mousedown",()=>{
+  favsBox.scrollBy({
+    top: 0,
+    left: -x,
+    behavior: "smooth",
+  })
+})
