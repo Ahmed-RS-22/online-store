@@ -1,44 +1,181 @@
+// products database
 const products = [
-  { id: 1, name: "product-1", price: 10, category: "cat-1", image: "1.jpg" },
-  { id: 2, name: "troduct-2", price: 20, category: "bat-2", image: "2.jpg" },
-  { id: 3, name: "croduct-3", price: 30, category: "bat-3", image: "3.jpg" },
-  { id: 4, name: "croduct-4", price: 40, category: "hat-4", image: "4.jpg" },
-  { id: 5, name: "product-5", price: 50, category: "hat-5", image: "5.jpg" },
-  { id: 6, name: "roduct-6", price: 60, category: "cat-6", image: "6.jpg" },
-  { id: 7, name: "troduct-7", price: 70, category: "cat-7", image: "7.jpg" },
-  { id: 8, name: "roduct-8", price: 80, category: "cat-8", image: "8.jpg" },
-  {id: 9, name: "product-9", price: 90, category: "cat-9", image: "9.jpg"},
-  {id: 10, name: "product-10", price: 100, category: "cat-10", image: "10.jpg"},
-  {id: 11, name: "product-11", price: 110, category: "cat-11", image: "11.jpg"},
-  {id: 12, name: "product-12", price: 120, category: "cat-12", image: "12.jpg"},
-  {id: 13, name: "product-13", price: 130, category: "cat-13", image: "13.jpg"},
-  {id: 14, name: "product-14", price: 140, category: "cat-14", image: "14.jpg"},
-  {id: 15, name: "product-15", price: 150, category: "cat-15", image: "15.jpg"},
-  {id: 16, name: "product-16", price: 160, category: "cat-16", image: "16.jpg"},
-  {id: 17, name: "product-17", price: 170, category: "cat-17", image: "17.jpg"},
-  {id: 18, name: "product-18", price: 180, category: "cat-18", image: "18.jpg"},
-  {id: 19, name: "product-19", price: 190, category: "cat-19", image: "19.jpg"},
-  {id: 20, name: "product-20", price: 200, category: "cat-20", image: "20.jpg"},
-  {id: 21, name: "product-21", price: 210, category: "cat-21", image: "21.jpg"},
-  {id: 22, name: "product-22", price: 220, category: "cat-22", image: "22.jpg"},
-  {id: 23, name: "product-23", price: 230, category: "cat-23", image: "23.jpg"},
-  {id: 24, name: "product-24", price: 240, category: "cat-24", image: "24.jpg"},
-  // {id: 25, name: "product-25", price: 250, category: "cat-25", image: "25.jpg"},
-  // {id: 26, name: "product-26", price: 260, category: "cat-26", image: "26.jpg"},
-  // {id: 27, name: "product-27", price: 270, category: "cat-27", image: "27.jpg"},
-  // {id: 28, name: "product-28", price: 280, category: "cat-28", image: "28.jpg"},
-  // {id: 29, name: "product-29", price: 290, category: "cat-29", image: "29.jpg"},
-  // {id: 30, name: "product-30", price: 300, category: "cat-30", image: "30.jpg"},
-  // {id: 31, name: "product-31", price: 300, category: "cat-31", image: "31.jpg"},
-  // {id: 32, name: "product-32", price: 300, category: "cat-32", image: "32.jpg"},
+  {
+    id: 1,
+    name: "LYR05 X Crazyfast",
+    price: 87,
+    category: "ADIDAS Shoes",
+    image: "1.jpg",
+  },
+  {
+    id: 2,
+    name: "LYW66 Football",
+    price: 86,
+    category: "ADIDAS Shoes",
+    image: "2.jpg",
+  },
+  {
+    id: 3,
+    name: "MBS06 Predator",
+    price: 89,
+    category: "ADIDAS Shoes",
+    image: "3.jpg",
+  },
+  {
+    id: 4,
+    name: "MAR07 Football",
+    price: 91,
+    category: "ADIDAS Shoes",
+    image: "4.jpg",
+  },
+  {
+    id: 5,
+    name: "Jr.Zoom Mercurial",
+    price: 72,
+    category: "Nike Shoes",
+    image: "5.jpg",
+  },
+  {
+    id: 6,
+    name: "Legend 9 Academy",
+    price: 76,
+    category: "Nike Shoes",
+    image: "6.jpg",
+  },
+  {
+    id: 7,
+    name: " Jr.Tiempo Legend",
+    price: 78,
+    category: "Nike Shoes",
+    image: "7.jpg",
+  },
+  {
+    id: 8,
+    name: "JR.MERCURIAL VAPOR",
+    price: 81,
+    category: "Nike Shoes",
+    image: "8.jpg",
+  },
+  {
+    id: 9,
+    name: "Barcelona 23-24",
+    price: 100,
+    category: "Club kit",
+    image: "9.jpg",
+  },
+  {
+    id: 10,
+    name: "Juventus 22-23",
+    price: 98,
+    category: "Club kit",
+    image: "10.jpg",
+  },
+  {
+    id: 11,
+    name: "Man United 23-24",
+    price: 99,
+    category: "Club kit",
+    image: "11.jpg",
+  },
+  {
+    id: 12,
+    name: "Real Madrid 23-24",
+    price: 97,
+    category: "Club kit",
+    image: "12.jpg",
+  },
+  {
+    id: 13,
+    name: "Germany 2022",
+    price: 95,
+    category: "national kit",
+    image: "13.jpg",
+  },
+  {
+    id: 14,
+    name: "Mexico 2022",
+    price: 92,
+    category: "national kit",
+    image: "14.jpg",
+  },
+  {
+    id: 15,
+    name: "Argentina 2024",
+    price: 96,
+    category: "national kit",
+    image: "15.jpg",
+  },
+  {
+    id: 16,
+    name: "Brazil 2023",
+    price: 94,
+    category: "national kit",
+    image: "16.jpg",
+  },
+  {
+    id: 17,
+    name: "European Cup",
+    price: 60,
+    category: "ADIDAS Ball",
+    image: "17.jpg",
+  },
+  {
+    id: 18,
+    name: "Champion Classic",
+    price: 63,
+    category: "ADIDAS Ball",
+    image: "18.jpg",
+  },
+  {
+    id: 19,
+    name: "Champion Challenger",
+    price: 65,
+    category: "ADIDAS Ball",
+    image: "19.jpg",
+  },
+  {
+    id: 20,
+    name: "Western Star",
+    price: 69,
+    category: "ADIDAS Ball",
+    image: "20.jpg",
+  },
+  {
+    id: 21,
+    name: "adidas MLS",
+    price: 62,
+    category: "Nike Ball",
+    image: "21.jpg",
+  },
+  {
+    id: 22,
+    name: "Nike Nk Acdmy Pro",
+    price: 68,
+    category: "Nike Ball",
+    image: "22.jpg",
+  },
+  {
+    id: 23,
+    name: "World Cup Quality",
+    price: 61,
+    category: "Nike Ball",
+    image: "23.jpg",
+  },
+  {
+    id: 24,
+    name: "Champion Sports Viper",
+    price: 67,
+    category: "Nike Ball",
+    image: "24.jpg",
+  },
 ];
-//////// favourite to red
+let searchInput = document.getElementById("search");
+//////// favourite buttons
 let favouriteItems = JSON.parse(localStorage.getItem("favourite")) || [];
-localStorage.setItem("favourite", JSON.stringify(favouriteItems))
+localStorage.setItem("favourite", JSON.stringify(favouriteItems));
 function favourite() {
   let favBtns = document.querySelectorAll(".favBtn");
   favBtns.forEach((btn) => {
-    // check if it exist in locla storage
     for (i of JSON.parse(localStorage.getItem("favourite"))) {
       if (i.id === btn.dataset.id) {
         btn.classList.add("fav");
@@ -55,48 +192,36 @@ function favourite() {
         id: favIemID,
         name: favItem.querySelector(".iname").textContent,
         category: favItem.querySelector(".icat").textContent,
-        image:favIemImage,
+        image: favIemImage,
       };
       addAndRemovefavourite(favData);
     });
   });
 }
 function addAndRemovefavourite(fav) {
-  // add or remove from locla storage
   const itemIndex = favouriteItems.findIndex((item) => item.id === fav.id);
   if (itemIndex !== -1) {
-    // If item exists, remove it
     favouriteItems.splice(itemIndex, 1);
   } else {
-    // If item does not exist, add it
     favouriteItems.push(fav);
   }
-  // Update local storage after add/remove
   localStorage.setItem("favourite", JSON.stringify(favouriteItems));
 }
 ////// side bar ///////
 let cart = document.querySelector(".Shopping-cart");
 let sideBar = document.getElementById("sider");
-//  sideBar.onblur=()=>{
-//    sideBar.classList.remove("show")
-//  }
-//  cart.addEventListener("click",()=>{
-//    sideBar.focus()
-//    sideBar.classList.toggle("show")
-//   })
-// Toggle the sideBar visibility when cart is clicked
 cart.addEventListener("click", (event) => {
   sideBar.classList.toggle("show");
   event.stopPropagation(); // Prevent click event from bubbling up to document
 });
-// Hide sideBar if clicking outside of it
 document.addEventListener("click", (event) => {
   if (!sideBar.contains(event.target) && !cart.contains(event.target)) {
-    sideBar.classList.remove("show"); // Hide sideBar if click is outside
+    sideBar.classList.remove("show");
     count();
   }
 });
 /////////////// main products
+// draw all products 
 let allProducts = document.querySelector(".products");
 function drawProducts() {
   let drawnProducts = products
@@ -127,7 +252,7 @@ function drawProducts() {
 /////////////// cart
 let productsCart = document.getElementById("sider");
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    localStorage.setItem("cart", JSON.stringify(cartItems));
+localStorage.setItem("cart", JSON.stringify(cartItems));
 function productsInCart() {
   let productinacrt = [];
   for (item of JSON.parse(localStorage.getItem("cart"))) {
@@ -149,9 +274,12 @@ function productsInCart() {
     `<a href="products.html"> view all products </a>` + productinacrt.join("");
   count();
 }
+// add an remove from cart check if it in cart 
+// 
 function isInCart(id) {
   return cartItems.some((item) => item.id === id);
 }
+// togle show and hide add/remove btns
 function ShowAndHide(id) {
   const addButton = document.querySelector(`.add[data-id="${id}"]`);
   const removeButton = document.querySelector(`.remove[data-id="${id}"]`);
@@ -164,7 +292,6 @@ function ShowAndHide(id) {
 function removeFromCart(id) {
   let index = cartItems.findIndex((item) => item.id === id);
   if (index !== -1) {
-
     cartItems.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cartItems));
     productsInCart();
@@ -184,7 +311,7 @@ function addToCart(id) {
       name: clickedItem.name,
       price: clickedItem.price,
       image: clickedItem.image,
-      category:clickedItem.category,
+      category: clickedItem.category,
       number: 1,
     };
     cartItems.push(soldItemData);
@@ -193,9 +320,9 @@ function addToCart(id) {
     count();
   }
 }
+// item on cart count update 
 function soldItemCont(id, action) {
   const soldItem = document.querySelector(`.sold[data-id="${id}"]`);
-
   let numberDisplay = soldItem.querySelector(".number");
   if (action === "add") {
     cartItems.find((item) => item.id == id).number++;
@@ -210,42 +337,86 @@ function soldItemCont(id, action) {
     }
   }
 }
+// badge count update
 function count() {
   let badge = document.querySelector(".Shopping-cart .badge");
   let solditems = document.querySelectorAll("#sider .sold");
-  if(solditems.length <= 0){
-    badge.style.display="none"
-  }else{
-    badge.style.display="block"
+  if (solditems.length <= 0) {
+    badge.style.display = "none";
+  } else {
+    badge.style.display = "block";
     badge.innerHTML = solditems.length;
-
   }
 }
-let searchInput = document.getElementById("search");
+// searching function 
 function searching() {
-  let searchedItems =allProducts.querySelectorAll(".product")
-  searchedItems.forEach((item) => {
-    searchInput.addEventListener("keyup",()=>{      
-      let searchInputValue = document.getElementById("search").value.toLowerCase();
-      const selection = document.getElementById("searchBy").value.toLowerCase()
-      let searchType;
-  if(selection == "name"){
-    searchType = item.querySelector(".iname").dataset.ser
-    }else if(selection == "category"){
-      searchType =item.querySelector(".icat").dataset.ser
-      }      
-      if (searchType.includes(searchInputValue) && searchType.startsWith(searchInputValue[0])) {
+  drawProducts();
+  searchInput.addEventListener("keyup", () => {
+    let searchInputValue = searchInput.value.toLowerCase().trim();
+    const selection = document.getElementById("searchBy").value.toLowerCase();
+    document.querySelectorAll(".product").forEach((item) => {
+      let searchField =
+        selection === "name"
+          ? item.querySelector(".iname").dataset.ser.toLowerCase()
+          : item.querySelector(".icat").dataset.ser.toLowerCase();
+      if (
+        searchField.includes(searchInputValue) ||
+        searchField.startsWith(searchInputValue[0])
+      ) {
         item.style.display = "flex";
-        } else {
-          item.style.display = "none";
-          if(searchInputValue.trim() == ""){
-            item.style.display = "flex"
-          }
-          }
-      })
-    })
+      } else {
+        item.style.display = "none";
+      }
 
+      if (searchInputValue === "") {
+        item.style.display = "flex";
+      }
+    });
+  });
 }
-drawProducts();
-searching()
 
+////////////////////////////////////////
+// slide show
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {showSlides((slideIndex += n));}
+function currentSlide(n) {showSlides((slideIndex = n));}
+function showSlides(n) {
+  let slides = document.getElementsByClassName("mySlides");
+  let i;
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+let slideIndext = 0;
+// auto show sliding
+showSlidest();
+function showSlidest() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndext++;
+  if (slideIndext > slides.length) {
+    slideIndext = 1;
+  }
+  slides[slideIndext - 1].style.display = "block";
+  setTimeout(showSlidest, 6000);
+}
+
+//////// calling functions
+drawProducts();
+searching();

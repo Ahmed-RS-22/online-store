@@ -1,21 +1,12 @@
 let cart = document.querySelector(".Shopping-cart");
 let sideBar = document.getElementById("sider");
-//  sideBar.onblur=()=>{
-//    sideBar.classList.remove("show")
-//  }
-//  cart.addEventListener("click",()=>{
-//    sideBar.focus()
-//    sideBar.classList.toggle("show")
-//   })
-// Toggle the sideBar visibility when cart is clicked
 cart.addEventListener("click", (event) => {
     sideBar.classList.toggle("show");
     event.stopPropagation(); // Prevent click event from bubbling up to document
 });
-// Hide sideBar if clicking outside of it
 document.addEventListener("click", (event) => {
     if (!sideBar.contains(event.target) && !cart.contains(event.target)) {
-        sideBar.classList.remove("show"); // Hide sideBar if click is outside
+        sideBar.classList.remove("show");
         count();
     }
 });
