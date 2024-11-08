@@ -360,8 +360,7 @@ function searching() {
           ? item.querySelector(".iname").dataset.ser.toLowerCase()
           : item.querySelector(".icat").dataset.ser.toLowerCase();
       if (
-        searchField.includes(searchInputValue) ||
-        searchField.startsWith(searchInputValue[0])
+        searchField.includes(searchInputValue)
       ) {
         item.style.display = "flex";
       } else {
